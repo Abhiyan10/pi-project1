@@ -1,0 +1,47 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+<div class="login-container">
+  {% if user.is_authenticated %}
+  <p>logged in bhaes</p>
+  
+  <p> please <a href="{% url 'logout' %}">logout </a> here </p>
+
+  {% else %}
+
+  <P> yor are not logged in</P>
+  <p>please <a href="{% url 'login' %}">log in </a> here </p>
+   <p>please <a href="{% url 'signup' %}">sign up </a> here </p>
+  {% endif %}
+ 
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
